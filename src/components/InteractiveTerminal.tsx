@@ -23,10 +23,12 @@ export const InteractiveTerminal: React.FC = () => {
     },
   ]);
   const [isRunning, setIsRunning] = useState(false);
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
+    }
   }, [history]);
 
   const executeCommand = (cmd: string) => {
@@ -209,6 +211,7 @@ GitHub    : https://github.com/Eduardomr1`,
           ].map((item) => (
             <button
               key={item.label}
+              type="button"
               onClick={() => handleQuickCommand(item.cmd)}
               className="px-2.5 py-1 rounded bg-[#121620] hover:bg-[#1E2636] border border-[#232C3D] hover:border-[#00E5FF]/40 text-xs font-mono text-[#94A3B8] hover:text-[#00E5FF] transition-colors focus:outline-none focus:ring-1 focus:ring-[#00E5FF]"
             >
@@ -231,6 +234,7 @@ GitHub    : https://github.com/Eduardomr1`,
             </div>
 
             <button
+              type="button"
               onClick={() => setHistory([])}
               className="p-1 rounded hover:bg-[#1A202C] text-[#64748B] hover:text-[#E2E8F0] transition-colors"
               title="Limpiar terminal"
@@ -241,7 +245,10 @@ GitHub    : https://github.com/Eduardomr1`,
           </div>
 
           {/* Terminal Screen Body */}
-          <div className="p-5 min-h-[300px] max-h-[460px] overflow-y-auto space-y-2.5 scanline">
+          <div
+            ref={scrollContainerRef}
+            className="p-5 min-h-[300px] max-h-[460px] overflow-y-auto space-y-2.5 scanline"
+          >
             {history.map((log) => {
               if (log.type === 'input') {
                 return (
@@ -282,7 +289,6 @@ GitHub    : https://github.com/Eduardomr1`,
                 Procesando flujo de ejecución...
               </div>
             )}
-            <div ref={terminalEndRef} />
           </div>
 
           {/* Terminal Input Line */}

@@ -29,7 +29,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand & Monogram */}
-        <a href="#" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#00E5FF] rounded">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#00E5FF] rounded text-left"
+          aria-label="Ir al inicio"
+        >
           <div className="w-8 h-8 rounded bg-[#12151B] border border-[#262D38] flex items-center justify-center font-mono font-bold text-xs text-[#00E5FF] group-hover:border-[#00E5FF] transition-colors shadow-[0_0_12px_rgba(0,229,255,0.15)]">
             EM
           </div>
@@ -41,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
               Systems & QA Lead
             </span>
           </div>
-        </a>
+        </button>
 
         {/* Center: Live Telemetry Indicator (Desktop) */}
         <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-[#12151B] border border-[#1E242E]">
