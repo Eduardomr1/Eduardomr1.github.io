@@ -8,5 +8,5 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  base: './', // Ensures relative assets work on GitHub Pages, Vercel, and local previews
+  base: '/', // Standard absolute root for GitHub User Pages (Eduardomr1.github.io)
 })

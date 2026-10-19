@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
               Eduardo Maytorena
             </span>
             <span className="text-[10px] font-mono text-[#64748B]">
-              Systems & QA Lead
+              Software Engineer / Mobile & QA
             </span>
           </div>
         </button>
@@ -104,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
             <GithubIcon className="w-4 h-4" />
           </a>
           <a
-            href="mailto:eduardo_maytorenar@outlook.com"
+            href="mailto:eduardomaytorenarna@gmail.com"
             className="p-2 rounded bg-[#12151B] border border-[#222834] text-[#94A3B8] hover:text-[#00E5FF] hover:border-[#00E5FF]/40 transition-all"
             title="Enviar correo"
             aria-label="Enviar correo"
@@ -182,7 +182,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
               <span>GitHub</span>
             </a>
             <a
-              href="mailto:eduardo_maytorenar@outlook.com"
+              href="mailto:eduardomaytorenarna@gmail.com"
               className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded bg-[#00E5FF]/10 border border-[#00E5FF]/40 text-xs font-mono text-[#00E5FF]"
             >
               <Mail className="w-4 h-4" />

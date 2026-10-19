@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, ArrowUp } from 'lucide-react';
+import { Mail, Copy, Check, ArrowUp, Phone } from 'lucide-react';
 import { LEDIndicator, CADCrosshair } from './OperatorPrimitives';
-import { GithubIcon } from './Icons';
+import { GithubIcon, LinkedinIcon } from './Icons';
 
 export const Footer: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const email = 'eduardo_maytorenar@outlook.com';
+  const email = 'eduardomaytorenarna@gmail.com';
+  const phone = '(667) 301-3709';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -27,15 +28,15 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="relative z-10 max-w-2xl space-y-4">
-            <LEDIndicator status="nominal" label="DISPONIBLE PARA NUEVOS RETOS" />
+            <LEDIndicator status="nominal" label="DISPONIBLE PARA NUEVAS OPORTUNIDADES" />
             
             <h2 className="text-3xl sm:text-4xl font-bold text-[#F8FAFC]">
-              ¿Construyendo software crítico donde la calidad no es opcional?
+              ¿Construyendo software crítico con arquitecturas Local-First y alta calidad?
             </h2>
 
             <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
-              Abierto a oportunidades como Software Engineer, QA Automation Lead o Systems Engineer.
-              Si buscas a alguien que entienda el código que prueba, automatice sin mocks innecesarios y lidere con métricas claras, conversemos.
+              Software Engineer / Mobile & QA Engineer con experiencia en arquitecturas Local-First,
+              sistemas distribuidos, observabilidad de baja latencia y aseguramiento de calidad con pruebas sin mocks innecesarios.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -64,6 +65,11 @@ export const Footer: React.FC = () => {
                   </>
                 )}
               </button>
+
+              <div className="flex items-center gap-2 text-xs font-mono text-[#94A3B8] px-3 py-2 bg-[#121620] border border-[#1E2533] rounded-md">
+                <Phone className="w-3.5 h-3.5 text-[#00E5FF]" />
+                <span>{phone}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -81,13 +87,22 @@ export const Footer: React.FC = () => {
 
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/Eduardomr1"
+              href="https://github.com/eduardo-mr1"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#00E5FF] transition-colors flex items-center gap-1.5"
             >
               <GithubIcon className="w-3.5 h-3.5" />
               <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eduardo-maytorena"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#00E5FF] transition-colors flex items-center gap-1.5"
+            >
+              <LinkedinIcon className="w-3.5 h-3.5" />
+              <span>LinkedIn</span>
             </a>
             <a
               href={`mailto:${email}`}
@@ -108,7 +123,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 text-center text-[10px] font-mono text-[#475569]">
-          OPERATOR THEME // ZERO MOCKS PHILOSOPHY // 2026 EDUARDO MAYTORENA
+          OPERATOR THEME // SOFTWARE ENGINEER / MOBILE & QA // 2026 EDUARDO MAYTORENA
         </div>
       </div>
     </footer>

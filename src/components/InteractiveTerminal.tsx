@@ -153,11 +153,12 @@ export const InteractiveTerminal: React.FC = () => {
         newHistory.push({
           id: (Date.now() + 1).toString(),
           type: 'output',
-          text: `Eduardo Maytorena — Ingeniero de Software & Líder de QA Automation
-Ubicación : Culiacán, Sinaloa, México (GMT-7)
-Enfoque   : Clean Architecture, Observabilidad de APIs, Linters AST, Motores de Almacenamiento
-Contacto  : eduardo_maytorenar@outlook.com
-GitHub    : https://github.com/Eduardomr1`,
+          text: `Eduardo Maytorena — Software Engineer / Mobile & QA Engineer
+Ubicación : Culiacán, Sinaloa, México | (667) 301-3709
+Enfoque   : Local-First, Clean Architecture, TCP Sockets, AST Analysis, Mobile (React Native/Expo, Flutter)
+Contacto  : eduardomaytorenarna@gmail.com
+LinkedIn  : https://www.linkedin.com/in/eduardo-maytorena
+GitHub    : https://github.com/eduardo-mr1`,
         });
       } else {
         newHistory.push({

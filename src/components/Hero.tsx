@@ -48,21 +48,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
           <div className="lg:col-span-8 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#10141B] border border-[#202836] font-mono text-xs text-[#00E5FF]">
               <Cpu className="w-3.5 h-3.5" />
-              <span>Sistemas Distribuidos · Observabilidad · AST Linters</span>
+              <span>Software Engineer / Mobile & QA Engineer</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
-              Diseño software donde{' '}
+              Sistemas distribuidos, móviles y{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#38BDF8] to-[#10B981]">
-                el código se prueba de verdad
+                arquitecturas Local-First
               </span>{' '}
-              y la latencia se mide en el socket.
+              con pruebas que no mienten.
             </h1>
 
             <p className="text-base sm:text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
-              Hola, soy <strong className="text-[#F1F5F9]">Eduardo Maytorena</strong>. Ingeniero de Software y Líder de QA Automation. 
-              Vengo de romper sistemas y liderar equipos de verificación: construyo arquitecturas limpias, 
-              motores en memoria compatibles con Redis, linters sobre el compilador de TypeScript y observabilidad con pruebas que no mienten.
+              Hola, soy <strong className="text-[#F1F5F9]">Eduardo Maytorena</strong>. Software Engineer con experiencia full-stack 
+              especializado en sistemas distribuidos y móviles con arquitecturas Local-First. Aplico estándares rigurosos de ingeniería—incluyendo 
+              análisis estático de AST del compilador, tipado estricto y suites completas de pruebas unitarias y de integración—para construir software escalable, tolerante a fallos y de alto rendimiento.
             </p>
 
             {/* Quick Interactive Command Copier */}
